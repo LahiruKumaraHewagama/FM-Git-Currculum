@@ -129,12 +129,12 @@ export const createDay = async (title: string, dayId: number | null, supabaseAcc
 }
 
 
-export const createLessons = async (topic: string, day_Id: number|null,content: string,isPractical:boolean,imageUrl:string, supabaseAccessToken: string | null) => {
+export const createLessons = async (topic: string, day_Id: number|null,content: string,isPractical:boolean,imageUrl:string,videoUrl:string, supabaseAccessToken: string | null) => {
   try {
 
     if (!supabaseAccessToken) return { data: null, error: "No access token" };
     const supabase = await supabaseClient(supabaseAccessToken);
-    const { data, error } = await supabase.from('lessons').insert([{ title:topic, day_id: day_Id,content,is_practical:isPractical,image_url:imageUrl }]);
+    const { data, error } = await supabase.from('lessons').insert([{ title:topic, day_id: day_Id,content,is_practical:isPractical,image_url:imageUrl ,video_url:videoUrl}]);
    
     console.log(data)
     return data;

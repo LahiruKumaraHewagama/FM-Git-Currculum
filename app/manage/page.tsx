@@ -22,6 +22,7 @@ const Manage = () => {
     const [day_Id, setDay] = useState<number>();
     const [content, setContent] = useState('');
     const [imageUrl, setImage] = useState('');
+    const [videoUrl, setVideo] = useState('');
     const [isPractical, setPractical] = useState(false);
     const [token, setToken] = useState("");
 
@@ -46,7 +47,7 @@ const Manage = () => {
 
     const handleCreateLessons = async () => {
         if (token) {
-            await createLessons(topic, day_Id, content, isPractical, imageUrl, token);
+            await createLessons(topic, day_Id, content, isPractical, imageUrl,videoUrl, token);
             alert("Successfully created new lesson!");
         }
     };
@@ -95,6 +96,7 @@ const Manage = () => {
                             <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Enter topic" />
                             <input type="number" className="block py-2.5 px-0  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={day_Id} onChange={(e) => setDay(parseInt(e.target.value))} placeholder="Enter day ID" />
                             <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={imageUrl} onChange={(e) => setImage(e.target.value)} placeholder="Enter Image URL" />
+                            <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={videoUrl} onChange={(e) => setVideo(e.target.value)} placeholder="Enter Video URL (Youtube)" />
                             <div className="flex items-start mb-5 pt-5">
                                 <div className="flex items-center h-5">
                                     <input

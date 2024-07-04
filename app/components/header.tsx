@@ -32,7 +32,7 @@ const Header: React.FC = () => {
                                         <Link href="/dashboard" style={{ color: "green", paddingLeft: "100px" }}>Home</Link>
                                     )}
                                 </div>
-                                <div className="col-span-1"><UserButton /></div>
+                                <div className="col-span-1 pl-5"><UserButton /></div>
                             </div>
                         </>
                     )}
