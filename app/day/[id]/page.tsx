@@ -71,24 +71,24 @@ const LessonPage: React.FC = () => {
             <img src="/logo.png" alt="Description of GIF" width="80" height="90" />
           </div> */}
           {/* <div >
-            <h1 className=" font text-base sm:text-lg lg:text-4xl font-bold text-green-700 pb-5"> GIT CURRICULUM </h1>
+            <h1 className=" font text-base sm:text-lg lg:text-4xl font-bold text-blue-700 pb-5"> GIT CURRICULUM </h1>
           </div> */}
-          {/* <h1 className=" font text-base sm:text-lg lg:text-4xl font-bold text-green-700 pb-5">__________________________</h1> */}
+          {/* <h1 className=" font text-base sm:text-lg lg:text-4xl font-bold text-blue-700 pb-5">__________________________</h1> */}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-12 ">
           <div className='col-span-3 text-right'>
-            <p className='font-bold text-4xl text-green-dark'>DAY {id}</p>
-            <h3 className='font-bold text-green-600'>{title}</h3>
+            <p className='font-bold text-4xl text-blue-dark'>DAY {id}</p>
+            <h3 className='font-bold text-blue-600'>{title}</h3>
           </div>
           <div className='col-span-1 text-center'>
-            <div className="h-[100%] border-r border-x-green-dark w-[50%]"></div>
+            <div className="h-[100%] border-r border-x-blue-dark w-[50%]"></div>
           </div>
           <div className='col-span-7'>
-            <p className='font-bold text-2xl text-green-600'>LESSONS</p>
+            <p className='font-bold text-2xl text-blue-600'>LESSONS</p>
             {lessons.filter((lesson: { is_practical: any; }) => !lesson.is_practical).map((lesson: Lessons) => (
               <div key={lesson.id} className='mb-4'>
-                <h2 className='text-lg font-semibold'>{lesson.title}</h2>
+                {lesson.title? <h2 className='text-lg font-semibold'>{lesson.title}</h2> : (<></>)}
                 <p>{lesson.content}</p>
                 {lesson.image_url ?
                   <div className="flex justify-left pt-5">
@@ -113,7 +113,7 @@ const LessonPage: React.FC = () => {
                 }
               </div>
             ))}
-            <p className='font-bold  text-2xl mt-10 text-green-600'>PRACTICAL</p>
+            {/* <p className='font-bold  text-2xl mt-10 text-blue-600'>PRACTICAL</p>
             {lessons.filter((lesson: { is_practical: any; }) => lesson.is_practical).map((lesson: Lessons) => (
               <div key={lesson.id} className='mb-4'>
                 <h2 className='text-lg font-semibold'>{lesson.title}</h2>
@@ -140,7 +140,7 @@ const LessonPage: React.FC = () => {
                   </div> : <></>
                 }
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

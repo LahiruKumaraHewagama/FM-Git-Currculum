@@ -82,9 +82,9 @@ const Manage = () => {
                     <div className='col-span-5'>
                         <h4 className="text-2xl font-semibold" >Adding Date</h4>
                         <form>
-                            <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Enter title" />
-                            <input type="number" className="block py-2.5 px-0  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={dayId} onChange={(e) => setDayId(parseInt(e.target.value))} placeholder="Enter day ID" />
-                            <button type="submit" onClick={handleCreateDay} className=" mt-5 text-sm bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded">
+                            <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Enter title" />
+                            <input type="number" className="block py-2.5 px-0  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" value={dayId} onChange={(e) => setDayId(parseInt(e.target.value))} placeholder="Enter day ID" />
+                            <button type="submit" onClick={handleCreateDay} className=" mt-5 text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
                                 ADD
                             </button>
                         </form>
@@ -93,10 +93,10 @@ const Manage = () => {
 
                         <h4 className="text-2xl font-semibold" >Adding Lessons</h4>
                         <form>
-                            <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Enter topic" />
-                            <input type="number" className="block py-2.5 px-0  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={day_Id} onChange={(e) => setDay(parseInt(e.target.value))} placeholder="Enter day ID" />
-                            <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={imageUrl} onChange={(e) => setImage(e.target.value)} placeholder="Enter Image URL" />
-                            <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer" value={videoUrl} onChange={(e) => setVideo(e.target.value)} placeholder="Enter Video URL (Youtube)" />
+                            <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Enter topic" />
+                            <input type="number" className="block py-2.5 px-0  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" value={day_Id} onChange={(e) => setDay(parseInt(e.target.value))} placeholder="Enter day ID" />
+                            <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" value={imageUrl} onChange={(e) => setImage(e.target.value)} placeholder="Enter Image URL" />
+                            <input type="text" className="block py-2.5 px-0  w-[500px] text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" value={videoUrl} onChange={(e) => setVideo(e.target.value)} placeholder="Enter Video URL (Youtube)" />
                             <div className="flex items-start mb-5 pt-5">
                                 <div className="flex items-center h-5">
                                     <input
@@ -104,15 +104,15 @@ const Manage = () => {
                                         type="checkbox"
                                         checked={isPractical}
                                         onChange={(e) => setPractical(e.target.checked)}
-                                        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-green-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                                        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
                                     />
                                 </div>
                                 <label htmlFor="practical" className="ms-2 text-sm font-medium text-black-900 dark:text-gray-400">
                                     Is Practical
                                 </label>
                             </div>
-                            <textarea id="content" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-green-500 focus:border-green-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-green-500 dark:focus:border-green-500" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Content"></textarea>
-                            <button type="submit" onClick={handleCreateLessons} className=" mt-5 text-sm bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded">
+                            <textarea id="content" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Content"></textarea>
+                            <button type="submit" onClick={handleCreateLessons} className=" mt-5 text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
                                 Create
                             </button>
                         </form>

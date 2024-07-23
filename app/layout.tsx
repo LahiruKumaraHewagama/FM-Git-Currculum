@@ -6,8 +6,8 @@ import { ClerkProvider } from '@clerk/nextjs'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Git Curriculum",
-  description: "Empower Your Workflow with Git",
+  title: "Clerk-Supabase Curriculum",
+  description: "Empower Your Workflow with Clerk-Supabase",
 };
 
 

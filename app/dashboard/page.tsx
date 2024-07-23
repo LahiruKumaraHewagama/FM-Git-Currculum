@@ -49,7 +49,7 @@ const Dashboard = () => {
 
     console.log(user?.publicMetadata.role);
     if (lessons.length === 0) {
-        return <p>No lessons found.</p>;
+        return <div style={{ textAlign: "center", padding: "10px" }} ><p>No lessons found.</p></div>;
     }
 
     // Group lessons by day
@@ -71,7 +71,7 @@ const Dashboard = () => {
                         <div className="flex justify-center">
                             <img src="/logo.png" alt="Description of GIF" width="150" height="90" />
                         </div>
-                        <div className="text-4xl font-semibold text-slate-900 mb-1">WELCOME to GIT CURRICULUM <span className=' text-slate-600 text-3xl'>{user?.username}</span></div>
+                        <div className="text-4xl font-semibold text-slate-900 mb-1">WELCOME to CLERK-SUPABASE CURRICULUM <span className=' text-slate-600 text-3xl'>{user?.username}</span></div>
                         <div>
                         </div>
                     </div>
@@ -104,15 +104,14 @@ const Dashboard = () => {
                                             )}
                                             {index === 0 && (
                                                 <td className="py-2 px-4 border-b" rowSpan={dayLessons.length}>
-                                                   <Link href={`/day/${lesson.day_id.day_id}`}>
-                                                    <p className="text-blue-600 hover:text-blue-800">{lesson.day_id.title}</p>
-                                                </Link>
+                                                    <Link href={`/day/${lesson.day_id.day_id}`}>
+                                                        <p className="text-blue-600 hover:text-blue-800">{lesson.day_id.title}</p>
+                                                    </Link>
                                                 </td>
                                             )}
-                                            <td className="py-2 px-4 border-b">
-                                              <p >{lesson.title}</p>
-                                            </td>
-                                           
+                                            {lesson.title ? <td className="py-2 px-4 border-b"><p >{lesson.title}</p> </td> : (<></>)}
+
+
                                         </tr>
                                     ));
                                 })}

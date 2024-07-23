@@ -59,17 +59,17 @@ export default function Home() {
               <img src="/logo.png" alt="Description of GIF" width="80" height="90" />
             </div>
             <div >
-              <h1 className=" font text-base sm:text-lg lg:text-4xl font-bold text-green-700 pb-5"> GIT CURRICULUM </h1>
-              <h6 className=' text-sm lg:text-md text-zinc-800 pb-1'>Welcome to the Git Curriculum platform</h6>
-              <h6 className=' text-sm lg:text-md text-zinc-800 pb-10'>Designed to learn and enhance your skills in Git version control.</h6>
-              <button className="bg-transparent hover:bg-green-dark text-green-dark font-semibold hover:text-white py-2 mb-10 px-4 border border-green-700 hover:border-transparent rounded">
+              <h1 className=" font text-base sm:text-lg lg:text-4xl font-bold text-blue-700 pb-5"> CLERK - SUPABASE CURRICULUM </h1>
+              <h6 className=' text-sm lg:text-md text-zinc-800 pb-1'>Welcome to the Curriculum platform</h6>
+              <h6 className=' text-sm lg:text-md text-zinc-800 pb-10'>Designed to learn and enhance your skills with clerk authentication and Supabase Role-based Access Control (RBAC).</h6>
+              <button className="bg-transparent hover:bg-blue-dark text-blue-dark font-semibold hover:text-white py-2 mb-10 px-4 border border-blue-700 hover:border-transparent rounded">
                 <SignInButton>Get Start</SignInButton>
               </button>
             </div>
             <div className="flex justify-center">
               <img src="/bg.gif" alt="Description of GIF" width="800" height="900" />
             </div>
-            <h1 className=" font text-base sm:text-lg lg:text-4xl font-bold text-green-700 pb-5">__________________________</h1>
+            <h1 className=" font text-base sm:text-lg lg:text-4xl font-bold text-blue-700 pb-5">__________________________</h1>
           </div>
         )}
       </div>

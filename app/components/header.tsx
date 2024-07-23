@@ -15,7 +15,7 @@ const Header: React.FC = () => {
         <header className="header pl-10">
             <div className="grid grid-cols-1 sm:grid-cols-12">
                 <div className="col-span-2">
-                    <img src="/head_logo.png" alt="Logo" className="w-24 sm:h-auto" />
+                    <img src="/head_logo.png" alt="Logo" className="w-28 sm:h-auto pt-2" />
                 </div>
                 <div className="col-span-10 pt-5 ">
                     {isSignedIn && (
@@ -25,11 +25,11 @@ const Header: React.FC = () => {
                                 <div className="col-span-2">
                                     {user?.publicMetadata.role === "admin" ? (
                                         <>
-                                            <Link href="/dashboard" style={{ color: "green", paddingLeft: "50px" }}>Home</Link>
-                                            <Link href="/manage" style={{ color: "green", paddingLeft: "50px" }}>Manage</Link>
+                                            <Link href="/dashboard" style={{ color: "blue", paddingLeft: "50px" }}>Home</Link>
+                                            <Link href="/manage" style={{ color: "blue", paddingLeft: "50px" }}>Manage</Link>
                                         </>
                                     ) : (
-                                        <Link href="/dashboard" style={{ color: "green", paddingLeft: "100px" }}>Home</Link>
+                                        <Link href="/dashboard" style={{ color: "blue", paddingLeft: "100px" }}>Home</Link>
                                     )}
                                 </div>
                                 <div className="col-span-1 pl-5"><UserButton /></div>
@@ -40,10 +40,10 @@ const Header: React.FC = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-12 pt-0">
                             <div className="col-span-10"></div>
                                 <div className="col-span-1">
-                                    <button className="bg-transparent hover:bg-green-600 text-green-dark font-semibold hover:text-white py-1 px-4 border border-green-700 hover:border-transparent rounded"><SignInButton /></button>
+                                    <button className="bg-transparent hover:bg-blue-600 font-semibold hover:text-white py-1 px-4 border border-blue-700 hover:border-transparent rounded"><SignInButton /></button>
                                 </div>
                                 <div className="col-span-1">
-                                    <button className="bg-transparent hover:bg-green-600 text-green-dark font-semibold hover:text-white py-1 px-4 border border-green-700 hover:border-transparent rounded"><SignUpButton /></button>
+                                    <button className="bg-transparent hover:bg-blue-600 font-semibold hover:text-white py-1 px-4 border border-blue-700 hover:border-transparent rounded"><SignUpButton /></button>
                                 </div>
                             </div>
                     )}
